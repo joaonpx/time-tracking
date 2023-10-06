@@ -1,0 +1,10 @@
+@import "./base/reset.scss";
+@import "./base/variables.scss";
+@import "./base/functions.scss";
+
+body {
+  font-family: "Rubik", sans-serif;
+
+  background: $very-dark-blue;
+  color: #ffff;
+}
