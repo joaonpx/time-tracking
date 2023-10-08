@@ -8,8 +8,107 @@
   font-size: 18px;
 }
 
+.card {
+  width: 100%;
+  background: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+}
+.card span {
+  color: hsl(236, 100%, 87%);
+  font-size: 0.8rem;
+}
+.card.profile {
+  margin-bottom: 2rem;
+}
+.card.profile .profile-info {
+  background: hsl(246, 80%, 60%);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 1rem;
+}
+.card.profile .profile-info #profile-picture {
+  width: 3.5rem;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+}
+.card.profile .profile-info #profile-name {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+.card.profile .filters {
+  padding-block: 1.5rem;
+}
+.card.profile .filters .filter-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+.card:not(.profile) {
+  background: none;
+}
+.card:not(.profile) .section-image {
+  background: url("../../images/icon-work.svg") hsl(15, 100%, 70%) no-repeat 95% -0.6rem;
+  height: 4rem;
+  padding-right: 1rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.card:not(.profile) .info {
+  padding: 2rem 1.5rem;
+  background: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+  position: relative;
+  bottom: 2rem;
+}
+.card:not(.profile) .info .row-a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.card:not(.profile) .info .row-a .title {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.card:not(.profile) .info .row-a svg {
+  cursor: pointer;
+  transition: all 200ms;
+}
+.card:not(.profile) .info .row-a svg path:hover {
+  fill: #fff;
+}
+.card:not(.profile) .info .row-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.card:not(.profile) .info .row-b .time {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
 body {
   font-family: "Rubik", sans-serif;
+  height: 100vh;
+  width: 100vw;
   background: hsl(226, 43%, 10%);
-  color: white;
+  color: #fff;
+  padding: 5rem 1rem;
+  line-height: 1.5;
+}
+body a {
+  text-decoration: none;
+  color: hsl(235, 45%, 61%);
+  transition: all 200ms;
+}
+body a:hover {
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

@@ -2,9 +2,29 @@
 @import "./base/variables.scss";
 @import "./base/functions.scss";
 
+@import "./components/card.scss";
+
 body {
   font-family: "Rubik", sans-serif;
 
+  height: 100vh;
+  width: 100vw;
+
   background: $very-dark-blue;
-  color: #ffff;
+  color: #fff;
+
+  padding: 5rem 1rem;
+
+  line-height: 1.5;
+
+  a {
+    text-decoration: none;
+    color: $desaturated-blue;
+
+    transition: all 200ms;
+
+    &:hover {
+      color: #fff;
+    }
+  }
 }

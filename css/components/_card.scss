@@ -1,0 +1,104 @@
+@import "../base/variables.scss";
+@import "../base/functions.scss";
+
+.card {
+  width: 100%;
+
+  background: $dark-blue;
+
+  border-radius: 1rem;
+
+  span {
+    color: $pale-blue;
+    font-size: 0.8rem;
+  }
+
+  &.profile {
+    margin-bottom: 2rem;
+    .profile-info {
+      background: $blue;
+
+      padding: 2rem 1.5rem;
+
+      border-radius: 1rem;
+
+      @include flexCenter(flex-start, row);
+      gap: 1rem;
+
+      #profile-picture {
+        width: 3.5rem;
+        border: 2px solid #fff;
+        border-radius: 2rem;
+      }
+
+      #profile-name {
+        font-weight: 300;
+        font-size: 1.4rem;
+      }
+    }
+
+    .filters {
+      padding-block: 1.5rem;
+      .filter-list {
+        list-style: none;
+
+        @include flexCenter(center, row);
+        gap: 2rem;
+      }
+    }
+  }
+
+  &:not(.profile) {
+    background: none;
+
+    .section-image {
+      background: url("../../images/icon-work.svg") $light-red-work no-repeat
+        95% -0.6rem;
+
+      height: 4rem;
+      padding-right: 1rem;
+
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    .info {
+      padding: 2rem 1.5rem;
+
+      background: $dark-blue;
+
+      border-radius: 1rem;
+
+      position: relative;
+      bottom: 2rem;
+
+      .row-a {
+        @include flexCenter(space-between, row);
+        .title {
+          color: #fff;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        svg {
+          cursor: pointer;
+
+          transition: all 200ms;
+
+          path {
+            &:hover {
+              fill: #fff;
+            }
+          }
+        }
+      }
+
+      .row-b {
+        @include flexCenter(space-between, row);
+        .time {
+          font-size: 1.8rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
